@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문_2</title>
+</head>
+<body>
+    <script>
+        const userID = window.prompt("ID를 입력하세요");
+        const userPW = window.prompt("PW를 입력하세요");
+
+        if(userID == "Gom" && userPW == "111") {
+            alert(userID + "님이 로그인하셨습니다.")
+        } else if (userID == "Gom") {
+            alert("PW 잘못 입력")
+        } else if (userPW == "111") {
+            alert("ID 잘못 입력")
+        } else {
+            alert("ID,PW 잘못 입력")
+        }
+            
+    </script>
+</body>
+</html>

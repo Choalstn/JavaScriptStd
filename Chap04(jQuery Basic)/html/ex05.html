@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지구본 , 텍스트 흔들기</title>
+    <!--CDN방식 - 인터넷이 되는 곳에서만 아래 코드가 적용 -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
+    <!--jQuery파일을 다운로드 하여 사용 -->
+    <script src="../libs/jquery-3.6.1.min.js"></script>
+    <link rel="stylesheet" href="../css/text.css">
+</head>
+
+<body>
+    <div class="hello"> 
+        <div class="text">
+            안녕하세요
+        </div>
+    </div>
+   
+    <script>
+        function hello() {
+            var rnd1 = Math.floor(Math.random() * 20);
+            var rnd2 = Math.floor(Math.random() * 30);
+            var rnd3 = Math.floor(Math.random() * 40) + 100;
+
+            //글자 흔들기
+            $(".text").css({
+                "bottom" : rnd1, "left" : rnd2
+            })
+
+            //배경 확대 
+            $(".hello").css({"background-size" : rnd3 + "%"});
+        }
+
+        //0.01초마다 hello() 호출 
+        setInterval(hello, 100);
+    </script>
+</body>
+
+</html>

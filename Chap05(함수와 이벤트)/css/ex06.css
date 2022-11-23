@@ -1,0 +1,33 @@
+.center {
+    position: relative;
+    margin: auto;
+}
+
+#container {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+}
+
+button {
+    border: 1px solid rgb(239, 189, 64);
+    border-radius: 15px;
+    transition: 0.25s;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgb(255, 120, 30);
+    font-weight: 600;
+    padding: 10px 20px;
+}
+
+.showBtn {
+    position: absolute;
+    left: 10px;
+    top: 190px;
+}
+
+.detail {
+    display: none;
+    text-align: left;
+    line-height: 1.8;
+}

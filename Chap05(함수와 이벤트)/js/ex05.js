@@ -12,6 +12,7 @@ function init() {
 
 function initEvent() {
   $("#btnStart").on("click",function () {
+    alert("qjxms")
     showImgs();
   });
 }

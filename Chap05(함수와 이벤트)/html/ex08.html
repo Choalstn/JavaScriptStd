@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/ex06.css">
+    <title>이벤트(jQuery 이용)</title>
+    <script src="../libs/jquery-3.6.1.min.js"></script>
+    <script>
+        $(function () {
+            $(".btn1").click(function () {
+                $("#p1").css({
+                    "color": "red",
+                    "font-weight": "bold"
+                })
+            });
+
+            $(".btn2").on({
+                "mouseover focus": function () {
+                    $("#p2").css({
+                        "color": "green",
+                        "font-weight": "bold"
+                    });
+                },
+
+                "mouseout blur": function () {
+                    $("#p2").css({
+                        "color": "black",
+                        "font-weight": "normal"
+                    })
+                }
+            });
+
+            //off()는 등록된 이벤트 제거할 때 사용 
+            //$(".btn1").off("click");
+        })
+    </script>
+</head>
+
+<body>
+    <p id="p1">반갑습니다.</p>
+    <button class="btn1">Button 1</button>
+
+    <p id="p2">안녕하세요.</p>
+    <button class="btn2">Button 2 </button>
+</body>
+
+</html>

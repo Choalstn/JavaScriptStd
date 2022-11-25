@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체방식으로 함수정의, 익명함수의 확장으로 함수 정의</title>
+    <script>
+        //실무에서 잘 사용 x
+
+        //객체방식으로 함수 정의 
+       var hi = new Function("name", "document.write(name + '님, 환영합니다.')");
+       hi("Gom");
+
+       //익명 함수의 확장 
+       //재사용의 목적이 아닌 다른 함수들과의 충돌을 막기 위한 방법 
+
+       (function(name) {
+        document.write(name + "님, 환영합니다.")
+       })("Jom");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

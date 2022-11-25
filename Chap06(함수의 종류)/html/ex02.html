@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수_2(매개변수 값으로 함수 이용)</title>
+    <script>
+        //아래 두 개의 함수는 일반적 함수 
+        function hi1() {
+            alert("안녕하세요");
+        }
+
+        function hi2() {
+            alert("반갑습니다");
+        }
+
+        //exex()는 매개변수 값으로 함수를 받고 있음 
+        function exex(func) {
+            func(); //매개변수로 받은 함수 호출 
+        }
+
+        exex(hi1);
+        exex(hi2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

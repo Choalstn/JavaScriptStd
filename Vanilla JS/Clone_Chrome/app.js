@@ -1,18 +1,22 @@
-const h1 = document.querySelector(".hello h1"); 
+const loginForm = document.querySelector("#login-form");
+const loginInput = loginForm.querySelector("input");
+const link = document.querySelector("a");
 
-function handleTitleClick() {
-    //className : 이전 존재하는 클래스를 신경쓰지 않고 바꿈
-    //classList : 이전 존재하는 클래스에 추가&제거 가능 
-    const clickedClass = "clicked"
+console.dir(loginInput);
 
-    // if(h1.classList.contains(clickedClass)) {
-    //     h1.classList.remove(clickedClass);
-    // } else {
-    //     h1.classList.add(clickedClass);
-    // }
-
-    //toggle : 위 다섯 줄 내용의 기능을 함 
-    h1.classList.toggle(clickedClass);
+// JS는 onLoginSubmit을 호출할 때 방금 발생한 이벤트들에 대한 정보를 담고 있는 아규먼트를 포함한 채 호출
+// event가 그것
+function onLoginSubmit(event) {
+    // form은 submit되면 자동적으로 새로고침하게 되어 있는데, 그것을 막는 역할
+    // 브라우저의 기본 동작을 막음
+    event.preventDefault();
+    console.log(event);
 }
 
-h1.addEventListener("click", handleTitleClick);
+function handleLinkClick(event) {
+    event.preventDefault();
+    console.dir(event);
+}
+
+loginForm.addEventListener("submit", onLoginSubmit);
+link.addEventListener("click", handleLinkClick);

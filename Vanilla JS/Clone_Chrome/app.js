@@ -1,18 +1,18 @@
 const h1 = document.querySelector(".hello h1"); 
 
 function handleTitleClick() {
-    //h1에 class="active"를 추가해줌으로써 글자 색상을 tomato로 바꿔줌
-    //js에서 직접적으로 style을 건드리지 않게 된 것
-    //단점 : h1에 기존 클래스가 존재하더라도 신경쓰지 않고 바꿔버림
-    
-    //변수로 지정해줌으로써 에러 발생률을 낮춤 
+    //className : 이전 존재하는 클래스를 신경쓰지 않고 바꿈
+    //classList : 이전 존재하는 클래스에 추가&제거 가능 
     const clickedClass = "clicked"
 
-    if(h1.className === clickedClass) {
-        h1.className = "";
-    } else {
-        h1.className = clickedClass;
-    }
+    // if(h1.classList.contains(clickedClass)) {
+    //     h1.classList.remove(clickedClass);
+    // } else {
+    //     h1.classList.add(clickedClass);
+    // }
+
+    //toggle : 위 다섯 줄 내용의 기능을 함 
+    h1.classList.toggle(clickedClass);
 }
 
 h1.addEventListener("click", handleTitleClick);
